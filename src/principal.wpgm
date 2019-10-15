@@ -1,0 +1,19 @@
+import wollok.game.*
+import personaje.*
+
+program abc {
+	
+	game.title("juegoPrueba")
+	game.height(10)
+	game.width(10)
+	game.ground("ground.png")
+	game.addVisual(toni)
+	keyboard.up().onPressDo({toni.moverArriba()})
+	keyboard.down().onPressDo({toni.moverAbajo()})
+	keyboard.left().onPressDo({toni.moverIzquierda()})
+	keyboard.right().onPressDo({toni.moverDerecha()})
+	keyboard.space().onPressDo({toni.decirEnergia()})
+	keyboard.p().onPressDo({toni.decirCantidadPasos()})
+	game.start()
+
+}
